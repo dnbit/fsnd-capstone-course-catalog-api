@@ -107,9 +107,10 @@ class Project(db.Model):
     instructions = Column(String, nullable=False)
     course_id = Column(Integer, db.ForeignKey('courses.id'), nullable=False)
 
-    def __init__(self, name, age):
+    def __init__(self, title, instructions, course_id):
         self.title = title
         self.instructions = instructions
+        self.course_id = course_id
 
     '''
     format()
@@ -121,6 +122,7 @@ class Project(db.Model):
             'id': self.id,
             'title': self.title,
             'instructions': self.instructions,
+            'course_id': self.course_id
         }
 
     '''
