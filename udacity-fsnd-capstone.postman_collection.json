@@ -1,0 +1,980 @@
+{
+	"info": {
+		"_postman_id": "36c4eb77-68c6-4fb2-bbaf-3210752997e9",
+		"name": "udacity-fsnd-capstone",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "public",
+			"item": [
+				{
+					"name": "public /courses",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "9575c3ac-cc47-4f49-97d3-2187ef29d947",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									"pm.test(\"value contains courses array\", function () {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(jsonData.courses).to.be.an('array')",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/courses",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"courses"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "public /projects",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "9733566d-f1fb-4d21-8179-e106b7840f5c",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									"pm.test(\"value contains projects array\", function () {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(jsonData.projects).to.be.an('array')",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/projects",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"projects"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "public /courses",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "75e789e3-17c8-45d1-8a84-75419d35d70c",
+								"exec": [
+									"pm.test(\"Status code is 401\", function () {",
+									"    pm.response.to.have.status(401);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/courses",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"courses"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "public /projects",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "6930ad52-3666-410f-bf48-0303d64d9df5",
+								"exec": [
+									"pm.test(\"Status code is 401\", function () {",
+									"    pm.response.to.have.status(401);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/projects",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"projects"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "public /courses",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "93b00090-4483-4142-90db-34d87cc8ef56",
+								"exec": [
+									"pm.test(\"Status code is 401\", function () {",
+									"    pm.response.to.have.status(401);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/courses/1",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"courses",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "public /projects",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "dcba1e80-f0f9-4623-8547-27fffe03d30b",
+								"exec": [
+									"pm.test(\"Status code is 401\", function () {",
+									"    pm.response.to.have.status(401);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/projects/1",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"projects",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "public /courses",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "93b00090-4483-4142-90db-34d87cc8ef56",
+								"exec": [
+									"pm.test(\"Status code is 401\", function () {",
+									"    pm.response.to.have.status(401);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/courses/1",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"courses",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "public /projects",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "ea6428b9-805a-4571-b9a1-1eb31cc845f8",
+								"exec": [
+									"pm.test(\"Status code is 401\", function () {",
+									"    pm.response.to.have.status(401);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/projects/1",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"projects",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "instructor",
+			"item": [
+				{
+					"name": "instructor /courses",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "a6475aa5-5489-4860-9c81-e18abb052f21",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									"pm.test(\"value contains courses array\", function () {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(jsonData.courses).to.be.an('array')",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/courses",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"courses"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "instructor /projects",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "976b1f2d-6dc2-47cd-b82f-8712722c8dc7",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									"pm.test(\"value contains projects array\", function () {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(jsonData.projects).to.be.an('array')",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/projects",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"projects"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "instructor /courses",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "15a995ff-ba3a-4979-8ada-193677bb8840",
+								"exec": [
+									"pm.test(\"Status code is 403\", function () {",
+									"    pm.response.to.have.status(403);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Full Stack\",\n    \"description\": \"Become a Full Stack Developer with this course\",\n    \"price\": 249\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/courses",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"courses"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "instructor /projects",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "e0d5656d-ebea-4052-ba5b-84541dd22588",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\": \"Capstone\",\n    \"instructions\": \"Build your own project using all you have learned during the course\",\n    \"course_id\": 1\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/projects",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"projects"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "instructor /courses",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "a0e3c620-5134-43fd-911b-b870e7be1afa",
+								"exec": [
+									"pm.test(\"Status code is 403\", function () {",
+									"    pm.response.to.have.status(403);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/courses/1",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"courses",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "instructor /projects",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "ad8923cc-4b0c-4de5-8dc4-df5aee58dd8f",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\": \"Full Stack Capstone\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/projects/1",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"projects",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "instructor /courses",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "93b00090-4483-4142-90db-34d87cc8ef56",
+								"exec": [
+									"pm.test(\"Status code is 403\", function () {",
+									"    pm.response.to.have.status(403);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/courses/2",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"courses",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "instructor /projects",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "ea6428b9-805a-4571-b9a1-1eb31cc845f8",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/projects/2",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"projects",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"auth": {
+				"type": "bearer",
+				"bearer": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6ImFWWUhmbDJSM0x4azJsOHE1S3BFbiJ9.eyJpc3MiOiJodHRwczovL25hbm9kZWdyZWVhcHBzLmV1LmF1dGgwLmNvbS8iLCJzdWIiOiJnb29nbGUtb2F1dGgyfDEwNjY0NTkwOTU4MTg0NjMwMjY1OCIsImF1ZCI6WyJtb3ZpZXMiLCJodHRwczovL25hbm9kZWdyZWVhcHBzLmV1LmF1dGgwLmNvbS91c2VyaW5mbyJdLCJpYXQiOjE1ODk1NjQ5NjksImV4cCI6MTU4OTY1MTM2OSwiYXpwIjoiNVFiTzM2MnplbDEzb2NUWXRCVkozUG0wZXBic21McXkiLCJzY29wZSI6Im9wZW5pZCBwcm9maWxlIGVtYWlsIiwicGVybWlzc2lvbnMiOlsiZGVsZXRlOnByb2plY3RzIiwicGF0Y2g6cHJvamVjdHMiLCJwb3N0OnByb2plY3RzIl19.ZnbgbqHOtPKiGO9GFtnnJhvKQ7QwPYYZDY3moxYL3MUvpMBHDxALk_mnQiY1oRC5IRveNxd3Q78eSyxCBIyp6Y2CVG2hQg_vIjYQHXm9J0BPxIZxqziIt9AfAlx0m7zVASXfUqVM9QYW-HwzDJdfDlk6Wcnzo6cGZQq2CHTx9IblY127z-yMZBlWvxzgS-Gz8r9kifn1B3fCzh67fDbX4L0n_I-CDlIE4mHZ4tDxT_oxzUtgo_2aengBguEHKXl9HbH3IasflRkDhwjU_RS01de59rLrSJKGEgiPR6v-qo9zdqm8IqMAQJV0_fIYxcTY4wQn2caPxcsik-qzRJdV-A",
+						"type": "string"
+					}
+				]
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "120787c1-f6eb-4fb7-b803-c58a308760cd",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "7dddaf6e-6beb-448d-bc4c-ba214affda74",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "program_manager",
+			"item": [
+				{
+					"name": "program_manager /courses",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "d99adb3c-d12d-4bbb-aaa8-d6d65d630213",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									"pm.test(\"value contains courses array\", function () {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(jsonData.courses).to.be.an('array')",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/courses",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"courses"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "program_manager /projects",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "e5255e40-d2df-47f9-b6d2-926b96b56cf1",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									"pm.test(\"value contains projects array\", function () {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(jsonData.projects).to.be.an('array')",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/projects",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"projects"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "program_manager /courses",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "33632d8e-d2b9-4b80-9f96-c073b924e0c4",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Full Stack\",\n    \"description\": \"Become a Full Stack Developer with this course\",\n    \"price\": 249\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/courses",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"courses"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "program_manager /projects",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "459783e3-5564-44b5-9fce-9ff05a883d03",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\": \"Capstone\",\n    \"instructions\": \"Build your own project using all you have learned during the course\",\n    \"course_id\": 2\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/projects",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"projects"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "program_manager /courses",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "8160dddd-1fa3-4468-acd1-8a96a455bd15",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"price\": 239\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/courses/1",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"courses",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "program_manager /projects",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "c698dd7d-aa31-4486-90e7-4e2ee5070e23",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\": \"Full Stack Capstone\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/projects/1",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"projects",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "program_manager /courses",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "ba2e5723-a61d-494d-9554-652b6d8c962c",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/courses/2",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"courses",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "program_manager /projects",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "ae1342bb-8c41-4098-83a7-54728443dbcb",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/projects/1",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"projects",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"auth": {
+				"type": "bearer",
+				"bearer": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6ImFWWUhmbDJSM0x4azJsOHE1S3BFbiJ9.eyJpc3MiOiJodHRwczovL25hbm9kZWdyZWVhcHBzLmV1LmF1dGgwLmNvbS8iLCJzdWIiOiJnb29nbGUtb2F1dGgyfDExMDg1NTU5Mjc2NDA1Njc2MTU5OSIsImF1ZCI6WyJtb3ZpZXMiLCJodHRwczovL25hbm9kZWdyZWVhcHBzLmV1LmF1dGgwLmNvbS91c2VyaW5mbyJdLCJpYXQiOjE1ODk1NjUxMDQsImV4cCI6MTU4OTY1MTUwNCwiYXpwIjoiNVFiTzM2MnplbDEzb2NUWXRCVkozUG0wZXBic21McXkiLCJzY29wZSI6Im9wZW5pZCBwcm9maWxlIGVtYWlsIiwicGVybWlzc2lvbnMiOlsiZGVsZXRlOmNvdXJzZXMiLCJkZWxldGU6cHJvamVjdHMiLCJwYXRjaDpjb3Vyc2VzIiwicGF0Y2g6cHJvamVjdHMiLCJwb3N0OmNvdXJzZXMiLCJwb3N0OnByb2plY3RzIl19.thaDgvqtHHhRGYkBhcjMWEZxO_-GBgI9VdQb3KEsNUmbkEAyhIG5DR3hcyNAsyCEiMWHnF5c3lS2HS3R220YBXJlRxp71jFTtaIkEh5_3UCj0H_wDeC_KVNyEklKd-rQzvL40jhNbJYuVwI9awFEcJVwj0dvrwdyUffwo-OtGCm31yCq7VxeHwWHoL0u8Czp9rR8dOql270nNhZEQe_v8BteeElvlRJta9nIFvi3_3NcDwkmiQdiRTAl93C8foN4I1wU1dPzJ-6wsw4J6g0LvNb-sqbjcqMxAZi4bOgi6HevfpWKMnTOmqvV4VaYu_vPhtNW8L4zZeC_LgM3sOqCrg",
+						"type": "string"
+					}
+				]
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "75c03514-24da-4411-b43b-201247084f97",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "66740738-ae60-43d4-a96d-3dbe8575cdaf",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "d63ffd1a-ea9b-48a5-b3c2-45755ad47dc4",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "959a2c02-ae1d-45d1-8754-0ca962529f4f",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"id": "dca64b31-a0ef-476d-b440-6ea732d70536",
+			"key": "host",
+			"value": "localhost:5000",
+			"type": "string"
+		}
+	],
+	"protocolProfileBehavior": {}
+}
