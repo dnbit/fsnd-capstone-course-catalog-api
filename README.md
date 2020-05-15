@@ -8,7 +8,7 @@
 
 Follow instructions to install the latest version of python for your platform in the [python docs](https://docs.python.org/3/using/unix.html#getting-and-installing-the-latest-version-of-python)
 
-#### Virtual Enviornment
+#### Virtual Environment
 
 We recommend working within a virtual environment whenever using Python for projects. This keeps your dependencies for each project separate and organaized. Instructions for setting up a virual enviornment for your platform can be found in the [python docs](https://packaging.python.org/guides/installing-using-pip-and-virtual-environments/)
 
@@ -65,6 +65,9 @@ python test_app.py
 Note: You will also need to set valid access tokens in setup.sh
 
 ## API Documentation
+
+### Base URL
+The API can be accessed [here](https://fsnd-capstone-api.herokuapp.com/courses)
 
 ### Roles and permissions
 
