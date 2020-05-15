@@ -114,6 +114,7 @@ def create_app(test_config=None):
         try:
             course.delete()
         except Exception as e:
+            print(e)
             abort(500)
 
         return jsonify(result)
@@ -219,6 +220,7 @@ def create_app(test_config=None):
         try:
             project.delete()
         except Exception as e:
+            print(e)
             abort(500)
 
         return jsonify(result)

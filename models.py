@@ -34,7 +34,8 @@ class Course(db.Model):
     name = Column(String, nullable=False)
     description = Column(String, nullable=False)
     price = Column(Integer, nullable=False)
-    projects = db.relationship('Project', backref='course')
+    projects = db.relationship('Project', cascade="all,delete",
+                               backref='course')
 
     def __init__(self, name, description, price):
         self.name = name
