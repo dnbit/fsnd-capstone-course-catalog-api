@@ -5,12 +5,19 @@ from flask_cors import CORS
 from auth import AuthError, requires_auth
 import json
 
+ITEMS_PER_PAGE = 10
+
 
 def create_app(test_config=None):
 
     app = Flask(__name__)
     setup_db(app)
     CORS(app)
+
+    def paginate_items(items, page):
+        end = page * ITEMS_PER_PAGE
+        start = end - ITEMS_PER_PAGE
+        return items[start:end]
 
     # Courses
     @app.route('/courses', methods=['GET'])
@@ -19,10 +26,18 @@ def create_app(test_config=None):
             "success": True,
         }
 
-        try:
-            courses = Course.query.all()
+        page = request.args.get('page', 1, type=int)
 
-            formatted_courses = [course.format() for course in courses]
+        courses = Course.query.all()
+
+        paginated_courses = paginate_items(courses, page)
+
+        if not paginated_courses:
+            abort(404)
+
+        try:
+            formatted_courses = [course.format() for course
+                                 in paginated_courses]
             result['courses'] = formatted_courses
         except Exception as e:
             print(e)
@@ -125,10 +140,18 @@ def create_app(test_config=None):
             "success": True,
         }
 
-        try:
-            projects = Project.query.all()
+        page = request.args.get('page', 1, type=int)
 
-            formatted_projects = [project.format() for project in projects]
+        projects = Project.query.all()
+
+        paginated_projects = paginate_items(projects, page)
+
+        if not paginated_projects:
+            abort(404)
+
+        try:
+            formatted_projects = [project.format() for project
+                                  in paginated_projects]
             result['projects'] = formatted_projects
         except Exception as e:
             print(e)
