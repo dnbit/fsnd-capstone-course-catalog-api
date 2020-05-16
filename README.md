@@ -1,5 +1,9 @@
 # Full Stack Nanodegree Capstone - Course Catalog API
 
+The Course Catalog API allows training centres to handle courses and the projects for each of them.
+
+This project is built as Capstone for the Full Stack Nanodegree at Udacity and it does not include a frontend. Endpoints can be called using tools like curl or postman. Examples for all of them are included in the postman collection file in this repository.
+
 ## Getting Started
 
 ### Installing Dependencies
